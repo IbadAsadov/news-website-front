@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
+    <div class="top-button">
+        <i class="fas fa-chevron-up topButton"></i>
+    </div>
     <div class="left-menu">
         <div class="row mx-0 pt-4 left-menu-header">
             <div class="col-10">
@@ -137,9 +141,9 @@
             <div class="row ">
                 <div class="col-6">
                     <ul class="header-1-menu">
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CONTACT</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="col-6">
@@ -253,7 +257,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container trend-news-box">
             <div class="row">
                 <div class="col-12 text-center pb-4 pt-5 trend-news-caption">
                     <h1>Trending Stories</h1>
@@ -795,18 +799,84 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="site-footer">
-            <div class="container">
-               <div class="row">
-                    <div class="col-lg-4 col-md-5">
-                        1
-                    </div>
-                    <div class="col-lg-4 col-md-5">2</div>
-                    <div class="col-lg-4 ">3</div>
-               </div>
-            </div>
+        
+    </div>
 
-        </div> -->
+    <div class="site-footer">
+        <div class="container">
+           <div class="row py-1">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-latest-posts">
+                        <h3 class="footer-latest-posts-caption">Latest Posts</h3>
+                        <div class="latest-post">
+                            <a href="">
+                                <div class="footer-latest-post-img" style="background-image: url('img/main-imga-1.jpg');">
+                                
+                                </div>
+                            </a>
+                            <div class="footer-latest-post-details">
+                                <h3><a href="">Lorem ipsum dolor sit amet.</a></h3>
+                                <span>20.11.2020</span>
+                            </div>
+                        </div>
+                        <div class="footer-latest-post">
+                            <a href="">
+                                <div class="footer-latest-post-img" style="background-image: url('img/main-imga-2.jpg');">
+                                
+                                </div>
+                            </a>
+                            <div class="footer-latest-post-details">
+                                <h3><a href="">Lorem ipsum dolor sit amet consectetur.</a></h3>
+                                <span>20.11.2020</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-categories">
+                        <h3 class="footer-categories-caption" >
+                            Categories
+                        </h3>
+                        <ul>
+                            <li><a href="">Coronavirus</a></li>
+                            <li><a href="">World</a></li>
+                            <li><a href="">Sport</a></li>
+                            <li><a href="">Lifestyle</a></li>
+                            <li><a href="">Tech</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 footer-details">
+                    
+                        
+                    <div class="footer-image">
+                        <a href=""><img src="img/logo-dark.png" alt=""></a>
+                    </div>
+                    <p>About text goes here, you can put a few lines that describe about your site to your visitors. <a href="about.html">Read More</a></p>
+                    <ul class="footer-social-network">
+                        <li>
+                            <a href=""><i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                        
+                    
+                </div>
+           </div>
+        </div>
     </div>
     
 
@@ -820,152 +890,7 @@
     <script src="js/jquery.js"></script>
     <!-- simplyscroll -->
     <script src="js/jquery.simplyscroll.js"></script>
-    <script>
-        $(document).ready(function(){
-           
-        let boxHeight = $('.left-menu').css('height').slice(0,-2);
-        let headerHeight = $('.left-menu-header').css('height').slice(0,-2);
-        let footerHeight = $('.left-menu-footer').css('height').slice(0,-2);
-        boxHeight = Number(boxHeight);
-        footerHeight = Number(footerHeight);
-        headerHeight = Number(headerHeight);
-        let mainheight = boxHeight - (headerHeight + footerHeight);
-        $('.left-menu-main').css('height',mainheight);
-        
-        
-        $(window).resize(function(){
-            boxHeight = $('.left-menu').css('height').slice(0,-2);
-            headerHeight = $('.left-menu-header').css('height').slice(0,-2);
-            footerHeight = $('.left-menu-footer').css('height').slice(0,-2);
-            boxHeight = Number(boxHeight);
-            footerHeight = Number(footerHeight);
-            headerHeight = Number(headerHeight);
-            mainheight = boxHeight - (headerHeight + footerHeight);
-            $('.left-menu-main').css('height',mainheight);
-
-        })
-
-        $('.menu-bars-icon').click(function(e){
-            
-            $('.left-menu').animate({
-                left:'0px',
-                
-            },'linear')
-            $('.left-menu').css({position:'fixed'})
-            e.preventDefault();
-            
-        })
-
-        
-
-        $('.menu-close').click(function(e){
-            $('.left-menu').animate({
-                left:'-100%',
-                
-            },'linear')
-            e.preventDefault();
-        });
-
-        $('.menu-seacrh-icon').click(function(e){
-            $('.search-box').fadeIn();
-            
-            e.preventDefault();
-        });
-        $('.search-box-close i').click(function(e){
-            $('.search-box').fadeOut();
-            $('.search-text').val(null)
-
-            
-            e.preventDefault();
-        })
-        
-       
-
-        
-        let prevCoor = 0;
-        
-        $(window).scroll(function(){
-            
-            if(prevCoor < $(window).scrollTop()){
-                $('.header-2').css({
-                    'top':'-70px',
-                    'background-color': 'whitesmoke'
-                })
-                
-            }
-            
-            else if(prevCoor > $(window).scrollTop()){
-                $('.header-2').css({
-                    'top':'-1px',
-                    'background-color': 'white'
-                })
-            }
-            if($(window).scrollTop()== 0){
-                $('.header-2').css({
-                    
-                    'background-color': 'whitesmoke'
-                })
-                
-            }
-            
-            prevCoor = $(window).scrollTop();
-        
-            
-
-        })
-            
-        
-        
-
-
-        $( ".search-text" ).focus(function() {
-            $('.search-form').css({
-                'border-bottom-color':'#97CAF1'
-            })
-            
-        });
-        $( ".search-text" ).focusout(function() {
-            $('.search-form').css({
-                'border-bottom-color':'white'
-            })
-            
-        });
-        let searchText = "";
-        $('.search-text').keyup(function(e){
-            searchText = $(this).val();
-            console.log(searchText);
-            
-            if(searchText.length === 0){
-                $('.box-clear').css({
-                    'display':'none'
-                })
-            }
-            else{
-                $('.box-clear').css({
-                    'display':'inline'
-                })
-
-            }
-            if(searchText != 0 && e.keyCode == 13){
-                $('my-search-form').submit();
-            }
-            
-        })
-
-        $('.box-clear').click(function(e){
-            
-            $('.search-text').val(null);
-            e.preventDefault();
-            
-        })
-
-        $("#scroller").simplyScroll({
-            speed: 1
-        });
-
-        
-    });
-    </script>
+    <script src="js/my-jquery.js"></script>
 
 </body>
 </html>

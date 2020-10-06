@@ -12,13 +12,13 @@ body::-webkit-scrollbar {
     
 }
 body::-webkit-scrollbar-track {
-background: white ; 
+background: whitesmoke ; 
 }
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
     
-    background: black; 
+    background: #1a202c; 
 }
 
 /* Handle on hover */
@@ -42,11 +42,38 @@ a:hover{
     font-family: 'Hind Vadodara', sans-serif;
     font-weight: 300;
 }
+
+.top-button{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index:9;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #a581ed;
+    display: none;
+    
+
+}
+.top-button i{
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+   
+  
+}
+.top-button i:hover{
+    cursor: pointer;
+}
+
 /* header-1 */
 
 
 .header-1{
-    background-color:black;
+    background-color:#1a202c;
     width: 100%;
     height: 55px;
     color: white;
@@ -466,7 +493,9 @@ background: ;
 
 
 /* trend news */
-
+.trend-news-box{
+    margin-bottom: 80px;
+}
 .trend-news{
     background-color: white;
     margin: 0 15px;
@@ -514,7 +543,7 @@ background: ;
 /* site body */
 .site-body{
     width: 100%;
-    padding-top: 80px;
+    
 }
 .news-box{
     background-color: white;
@@ -771,7 +800,185 @@ background: ;
     background-color: white;
 }
 
+/*footer*/
 
+
+.site-footer{
+    background-color: #1a202c;
+    color: white;
+}
+
+.footer-latest-posts{
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    padding: 1rem 0 0 0;
+    
+}
+
+.footer-latest-posts-caption{
+    color: #fff;
+    font-family: Hind Vadodara;
+    font-weight: 700;
+    letter-spacing: -.0125em;
+    line-height: 1.25;
+    font-size: 1.35rem;
+    margin-bottom: 1.7rem;
+}
+
+.footer-latest-post{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.footer-latest-post-img{
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-size: cover;
+}
+.footer-latest-post-details{
+    width: calc(100% - 70px);
+    height: 100px;
+    padding: 0 4%;
+
+}
+.footer-latest-post-details h3{
+    font-family: Hind Vadodara;
+    font-weight: 700;
+    letter-spacing: -.0125em;
+    line-height: 1rem;
+    text-transform: none;
+    font-size: 1.1rem;
+}
+.footer-latest-post-details h3 a{
+    color: #fff;
+}
+.footer-latest-post-details h3 a:hover{
+    color: #ffffffc7;
+}
+.footer-latest-post-details span{
+    color: rgb(255 255 255 / 50%);
+  
+    font-family: Barlow;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1.5;
+    font-size: 0.875rem; 
+    
+}
+
+.footer-categories{
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0 1rem 0;
+
+}
+.footer-categories-caption{
+    color: #fff;
+    font-family: Hind Vadodara;
+    font-weight: 700;
+    letter-spacing: -.0125em;
+    line-height: 1.25;
+    font-size: 1.35rem;
+    margin-bottom: 1.7rem;
+}
+
+.footer-categories ul li{
+    float: left;
+    margin-right: 10px;
+    background-color:#2d3748;
+    padding: 5px 15px;
+    border-radius: 17px;
+    margin-bottom: 10px;
+
+
+}
+
+.footer-categories ul li a{
+    color: #c9ccd1;
+}
+.footer-categories ul li a:hover{
+    
+    color: #929bac;
+}
+
+.footer-details{
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+   
+}
+
+.footer-image{
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+   
+}
+.footer-image a img{
+    width: 100%;
+}
+
+.footer-details p{
+    color: #bbbabb;
+    font-size: 1rem;
+}
+.footer-social-network{
+    margin-bottom: 0;
+}
+.footer-social-network li{
+    float: left;
+    margin-right: 1rem;
+    
+}
+.footer-social-network li a{
+    font-size: 1.3rem;
+    color:white;
+}
+.footer-social-network  li a:hover{
+    color:  rgb(194, 185, 185);
+}
+
+
+/* about */
+
+.second-pages-caption{
+    width: 100%;
+    height: 150px;
+    background-color: #1A202C;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.second-pages-caption h1{
+    color: white;
+    font-family: Hind Vadodara;
+    font-weight: 700;
+    letter-spacing: -.0125em;
+   
+}
+
+.about-content{
+    width: 100%;
+
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
 @media only screen and (max-width:1024px){
     .header-1{
         display: none;
@@ -954,6 +1161,24 @@ background: ;
         
         
     }
+    
+    /*footer*/
+
+    .footer-details{
+     
+        margin-top: 0;
+        margin-bottom: 0rem;
+       
+    
+    }
+
+    .footer-image{
+        width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+    
+    }
+   
    
 }
 @media only screen and (max-width:768px){
@@ -1051,10 +1276,9 @@ background: ;
     }
     
     /* site body */
-    .site-body{
-        padding-top: 60px;
+    .trend-news-box{
+        margin-bottom: 60px;
     }
-   
     .news-box-image{
         height: 270px;
        
@@ -1095,6 +1319,21 @@ background: ;
     .news-box-text-rd:hover{
         color: #9f7aea;
     }
+    
+    /*footer*/
+
+
+
+
+    .footer-categories{
+        width: 100%;
+        height: auto;
+        margin-top:0rem;
+        margin-bottom: 1rem;
+        padding: .5rem 0 1rem 0;
+
+    }
+    
 
         
 
@@ -1314,5 +1553,68 @@ background: ;
         
         
     }
+
+
+    /* footer */
+
+        
+    
+
+    .footer-latest-posts{
+     
+        padding: 1rem 0 0 0 ;
+        
+    }
+
+
+
+    .footer-categories{
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+        padding: 0rem 0 1rem 0;
+
+    }
+    
+
+
+    .footer-details{
+        width: 100%;
+        height: auto;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    
+    }
+
+    .footer-image{
+        width: 230px;
+        height: auto;
+        margin-bottom: 20px;
+    
+    }
+
+    .top-button{
+        right: 20px;
+        bottom: 20px;
+    }
+
+
+    /* about */
+    .second-pages-caption{
+     
+        margin-bottom: 60px;
+    }
+    
+    .second-pages-caption h1{
+       font-size: 32px;
+       
+    }
+    .about-content{
+       
+        padding: 1rem;
+        margin-bottom: 3rem;
+    }
+   
   
 }
