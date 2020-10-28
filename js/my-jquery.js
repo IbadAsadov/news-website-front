@@ -34,7 +34,7 @@
         $('.left-menu').animate({
             left:'0px',
             
-        },'linear')
+        })
         $('.left-menu').css({position:'fixed'})
         e.preventDefault();
         
@@ -46,7 +46,7 @@
         $('.left-menu').animate({
             left:'-100%',
             
-        },'linear')
+        })
         e.preventDefault();
     });
 
@@ -86,6 +86,7 @@
         
         prevCoor = $(window).scrollTop();
 
+        
         if ($(this).scrollTop() > 1000) {
             $(".top-button").fadeIn(500);
         }
